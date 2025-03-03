@@ -1,0 +1,237 @@
+ 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tischreservierung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tischreservierung</h1>
+
+    <!-- Etagenwechsel-Button -->
+    <button id="wechselEtage">Wechsle zu Etage 1</button>
+
+    <!-- Datumsauswahl -->
+    <label for="reservierungsDatum">Reservierungsdatum:</label>
+    <input type="date" id="reservierungsDatum">
+
+    <!-- Kontaktfeld -->
+    <label for="kontakt">E-Mail oder Telefonnummer:</label>
+    <input type="text" id="kontakt" placeholder="Gib deine E-Mail oder Telefonnummer ein">
+
+<!-- Etage 2 -->
+<div class="etage" id="etage2">
+  <h2>Etage 2</h2>
+  <div class="restaurant">
+    <!-- Hier kommt die neue kleine Tischgruppe -->
+    <div class="restaurant-row">
+      <div class="tischgruppe klein">
+        <div class="tisch"></div>
+        <div class="stuhl stuhl-links1"></div>
+        <div class="stuhl stuhl-rechts1"></div>
+      </div>
+    </div>
+
+    <!-- Zweite Tischreihe -->
+<!-- Erste Tischreihe in Etage 2: 4 normale Tischgruppen plus die Bank-Tischgruppe -->
+<div class="restaurant-row">
+  <!-- Bank-Tischgruppe als weiteres Geschwisterelement -->
+  <div class="tischgruppe-bank">
+    <div class="bank bank-links"></div>
+    <div class="tisch"></div>
+    <div class="stuhl-rund stuhl-rund-rechts1"></div>
+    <div class="stuhl-rund stuhl-rund-rechts2"></div>
+ </div>
+
+  <div class="tischgruppe">
+    <!-- Inhalt Tischgruppe 1 -->
+    <div class="tisch"></div>
+    <div class="stuhl stuhl-links1"></div>
+    <div class="stuhl stuhl-links2"></div>
+    <div class="stuhl stuhl-rechts1"></div>
+    <div class="stuhl stuhl-rechts2"></div>
+  </div>
+  <div class="tischgruppe">
+    <!-- Inhalt Tischgruppe 2 -->
+    <div class="tisch"></div>
+    <div class="stuhl stuhl-links1"></div>
+    <div class="stuhl stuhl-links2"></div>
+    <div class="stuhl stuhl-rechts1"></div>
+    <div class="stuhl stuhl-rechts2"></div>
+  </div>
+  <div class="tischgruppe">
+    <!-- Inhalt Tischgruppe 3 -->
+    <div class="tisch"></div>
+    <div class="stuhl stuhl-links1"></div>
+    <div class="stuhl stuhl-links2"></div>
+    <div class="stuhl stuhl-rechts1"></div>
+    <div class="stuhl stuhl-rechts2"></div>
+  </div>
+  <div class="tischgruppe">
+    <!-- Inhalt Tischgruppe 4 -->
+    <div class="tisch"></div>
+    <div class="stuhl stuhl-links1"></div>
+    <div class="stuhl stuhl-links2"></div>
+    <div class="stuhl stuhl-rechts1"></div>
+    <div class="stuhl stuhl-rechts2"></div>
+  </div>
+</div>
+
+    <div class="restaurant-row">
+      <!-- Linke lange Tischgruppe -->
+      <div class="tischgruppe-lang tischgruppe-lang-left">
+     <div class="tisch-lang"></div>
+    <div class="stuhl-lang stuhl-lang-links1"></div>
+    <div class="stuhl-lang stuhl-lang-links2"></div>
+    <div class="stuhl-lang stuhl-lang-links3"></div>
+    <div class="stuhl-lang stuhl-lang-links4"></div>
+    <div class="stuhl-lang stuhl-lang-links5"></div> <!-- Neuer Stuhl links -->
+    <div class="stuhl-lang stuhl-lang-links6"></div> <!-- Neuer Stuhl links -->
+    <div class="stuhl-lang stuhl-lang-rechts1"></div>
+    <div class="stuhl-lang stuhl-lang-rechts2"></div>
+    <div class="stuhl-lang stuhl-lang-rechts3"></div>
+    <div class="stuhl-lang stuhl-lang-rechts4"></div>
+    <div class="stuhl-lang stuhl-lang-rechts5"></div> <!-- Neuer Stuhl rechts -->
+    <div class="stuhl-lang stuhl-lang-rechts6"></div> <!-- Neuer Stuhl rechts -->
+</div>     
+      <!-- 4 kleine Tischgruppen in der Mitte -->
+      <div class="tischgruppe">
+        <div class="tisch"></div>
+        <div class="stuhl stuhl-links1"></div>
+        <div class="stuhl stuhl-links2"></div>
+        <div class="stuhl stuhl-rechts1"></div>
+        <div class="stuhl stuhl-rechts2"></div>
+      </div>
+      <div class="tischgruppe">
+        <div class="tisch"></div>
+        <div class="stuhl stuhl-links1"></div>
+        <div class="stuhl stuhl-links2"></div>
+        <div class="stuhl stuhl-rechts1"></div>
+        <div class="stuhl stuhl-rechts2"></div>
+      </div>
+      <div class="tischgruppe">
+        <div class="tisch"></div>
+        <div class="stuhl stuhl-links1"></div>
+        <div class="stuhl stuhl-links2"></div>
+        <div class="stuhl stuhl-rechts1"></div>
+        <div class="stuhl stuhl-rechts2"></div>
+      </div>
+      <div class="tischgruppe">
+        <div class="tisch"></div>
+        <div class="stuhl stuhl-links1"></div>
+        <div class="stuhl stuhl-links2"></div>
+        <div class="stuhl stuhl-rechts1"></div>
+        <div class="stuhl stuhl-rechts2"></div>
+      </div>
+      
+      <!-- Rechte lange Tischgruppe -->
+      <div class="tischgruppe-lang tischgruppe-lang-right">
+    <div class="tisch-lang"></div>
+    <div class="stuhl-lang stuhl-lang-links1"></div>
+    <div class="stuhl-lang stuhl-lang-links2"></div>
+    <div class="stuhl-lang stuhl-lang-links3"></div>
+    <div class="stuhl-lang stuhl-lang-links4"></div>
+    <div class="stuhl-lang stuhl-lang-links5"></div> <!-- Neuer Stuhl links -->
+    <div class="stuhl-lang stuhl-lang-links6"></div> <!-- Neuer Stuhl links -->
+    <div class="stuhl-lang stuhl-lang-rechts1"></div>
+    <div class="stuhl-lang stuhl-lang-rechts2"></div>
+    <div class="stuhl-lang stuhl-lang-rechts3"></div>
+    <div class="stuhl-lang stuhl-lang-rechts4"></div>
+    <div class="stuhl-lang stuhl-lang-rechts5"></div> <!-- Neuer Stuhl rechts -->
+    <div class="stuhl-lang stuhl-lang-rechts6"></div> <!-- Neuer Stuhl rechts --> 
+     </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Etage 1 bleibt unverändert -->
+    <div class="etage" id="etage1" style="display: none;">
+        <h2>Etage 1</h2>
+        <div class="restaurant">
+            <div class="restaurant-row">
+                <div class="tischgruppe">
+                    <div class="tisch"></div>
+                    <div class="stuhl stuhl-links1"></div>
+                    <div class="stuhl stuhl-links2"></div>
+                    <div class="stuhl stuhl-rechts1"></div>
+                    <div class="stuhl stuhl-rechts2"></div>
+                </div>
+                <div class="tischgruppe">
+                    <div class="tisch"></div>
+                    <div class="stuhl stuhl-links1"></div>
+                    <div class="stuhl stuhl-links2"></div>
+                    <div class="stuhl stuhl-rechts1"></div>
+                    <div class="stuhl stuhl-rechts2"></div>
+                </div>
+                <div class="tischgruppe">
+                    <div class="tisch"></div>
+                    <div class="stuhl stuhl-links1"></div>
+                    <div class="stuhl stuhl-links2"></div>
+                    <div class="stuhl stuhl-rechts1"></div>
+                    <div class="stuhl stuhl-rechts2"></div>
+                </div>
+                <div class="tischgruppe">
+                    <div class="tisch"></div>
+                    <div class="stuhl stuhl-links1"></div>
+                    <div class="stuhl stuhl-links2"></div>
+                    <div class="stuhl stuhl-rechts1"></div>
+                    <div class="stuhl stuhl-rechts2"></div>
+                </div>
+            </div>
+        <!-- ✅ NEUE TISCHGRUPPE AM ENDE -->
+        <div class="restaurant-row">
+            <div class="tischgruppe">
+                <div class="tisch halber-tisch"></div>
+                <div class="stuhl stuhl-links1"></div>
+                <div class="stuhl stuhl-rechts1"></div>
+            </div>
+        </div>
+<div class="restaurant">
+    <div class="tischgruppe ecke-links-oben">
+        <div class="tisch"></div>                                      
+                    <div class="stuhl stuhl-links1"></div>
+                    <div class="stuhl stuhl-links2"></div>
+                    <div class="stuhl stuhl-rechts1"></div>
+                    <div class="stuhl stuhl-rechts2"></div>
+                </div>
+
+
+    <div class="tischgruppe ecke-rechts-unten">
+                <div class="tisch halber-tisch"></div>
+                <div class="stuhl stuhl-links1"></div>
+                <div class="stuhl stuhl-rechts1"></div>
+
+    </div>
+</div>
+    <!-- ❗❗ Neuer langer Tisch muss HIER sein, bevor die restaurant-DIV schließt! -->
+    <div class="tischgruppe-lang">
+        <div class="tisch-lang"></div>
+        <div class="stuhl-lang stuhl-lang-links1"></div>
+        <div class="stuhl-lang stuhl-lang-links2"></div>
+        <div class="stuhl-lang stuhl-lang-links3"></div>
+        <div class="stuhl-lang stuhl-lang-links4"></div>
+        <div class="stuhl-lang stuhl-lang-rechts1"></div>
+        <div class="stuhl-lang stuhl-lang-rechts2"></div>
+        <div class="stuhl-lang stuhl-lang-rechts3"></div>
+        <div class="stuhl-lang stuhl-lang-rechts4"></div>
+      </div>
+  <div class="tischgruppe-bank">
+    <div class="bank bank-links"></div>
+    <div class="tisch"></div>
+    <div class="stuhl-rund stuhl-rund-rechts1"></div>
+    <div class="stuhl-rund stuhl-rund-rechts2"></div>
+</div>
+</div>
+ </div>
+</div>    
+
+ <button id="reservierenButton">Reservieren</button>   
+
+<button id="toggleAdmin">Admin-Ansicht</button>
+<div id="adminReservierungen" style="display: none;"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
