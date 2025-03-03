@@ -1,0 +1,379 @@
+
+/* Allgemeines Styling */
+body {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Abstand zwischen den Tischreihen */
+    align-items: center;
+}
+
+.restaurant-row {
+    display: flex;
+    gap: 100px; /* Abstand zwischen den Tischgruppen */
+}
+
+/* Große Tischgruppen */
+.tischgruppe {
+    position: relative;
+    width: 160px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tisch {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 5px solid #444;
+    position: absolute;
+    transition: background 0.3s ease;
+}
+
+/* Stühle für große Tischgruppen */
+.stuhl {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 3px solid #444;
+    position: absolute;
+}
+
+.stuhl-links1 { left: -32px; top: 20px; }
+.stuhl-links2 { left: -32px; bottom: 20px; }
+.stuhl-rechts1 { right: -32px; top: 20px; }
+.stuhl-rechts2 { right: -32px; bottom: 20px; }
+
+/* ✅ Fix: Beim Anklicken werden nur Tische & Stühle gefärbt */
+.tischgruppe.ausgewählt .tisch,
+.tischgruppe.ausgewählt .stuhl {
+    background: limegreen !important; /* Tisch & Stühle werden grün */
+}
+
+.tischgruppe.reserviert .tisch,
+.tischgruppe.reserviert .stuhl {
+    background: crimson !important; /* Reservierte Tische rot */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Etagenwechsel-Button */
+#wechselEtage {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#wechselEtage:hover {
+    background-color: #2980b9;
+}
+
+/* Reservieren-Button */
+#reservierenButton {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: orange;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+#reservierenButton:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* Datum- und Kontaktfelder */
+#kontakt, #reservierungsDatum {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    text-align: center;
+    width: 250px;
+    cursor: text;
+}
+/* Halber Tisch höher setzen */
+.halber-tisch {
+    width: 100px;  
+    height: 50px;
+    background-color: white;
+    border: 5px solid #444;
+    position: relative;  /* Falls nicht schon gesetzt */
+    top: -25px; /* Bewegt den Tisch 20px nach oben */
+    transition: background 0.3s ease;
+}
+.tischgruppe.ecke-links-oben {
+    position: absolute;
+    top: 20px;   /* Abstand vom oberen Rand */
+    left: 20px;  /* Abstand vom linken Rand */
+}
+
+.tischgruppe.ecke-rechts-unten {
+    position: absolute;
+    bottom: 20px;   /* Abstand vom unteren Rand */
+    right: 20px;    /* Abstand vom rechten Rand */
+}
+.tischgruppe-lang {
+    position: absolute;
+    width: 160px;
+     top: 150px;   /* Abstand von oben */
+    left: 100px;  /* Abstand von links */   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 440px; 
+    z-index: 10; /* Bringt den Tisch in den Vordergrund */
+}
+.tisch-lang {
+    height: 400px;
+    background-color: white;
+    border: 5px solid #444;
+    position: absolute;
+    transition: background 0.3s ease;
+    width: 100px;
+}
+.stuhl-lang {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 3px solid #444;
+    position: absolute;
+}
+/* Linke Stühle */
+.stuhl-lang-links1 { left: -30px; top: 20px; }
+.stuhl-lang-links2 { left: -30px; top: 90px; }
+.stuhl-lang-links3 { left: -30px; top: 160px; }
+.stuhl-lang-links4 { left: -30px; top: 230px; }
+.stuhl-lang-links5 { left: -30px; top: 300px; }
+.stuhl-lang-links6 { left: -30px; top: 370px; }
+/* Rechte Stühle */
+.stuhl-lang-rechts1 { right: -30px; top: 20px; }
+.stuhl-lang-rechts2 { right: -30px; top: 90px; }
+.stuhl-lang-rechts3 { right: -30px; top: 160px; }
+.stuhl-lang-rechts4 { right: -30px; top: 230px; }
+.stuhl-lang-rechts5 { right: -30px; top: 300px; }
+.stuhl-lang-rechts6 { right: -30px; top: 370px; }
+/* ✅ Langer Tisch wird grün, wenn er ausgewählt ist */
+.tischgruppe-lang.ausgewählt .tisch-lang,
+.tischgruppe-lang.ausgewählt .stuhl-lang {
+    background: limegreen !important;
+}
+
+/* ✅ Langer Tisch wird rot, wenn er reserviert ist */
+.tischgruppe-lang.reserviert .tisch-lang,
+.tischgruppe-lang.reserviert .stuhl-lang {
+    background: crimson !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+/* ✅ Styling für die neue Tischgruppe */
+.tischgruppe-bank {
+    position: relative;
+    width: 180px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ✅ Tisch */
+.tischgruppe-bank .tisch {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 5px solid #444;
+    position: absolute;
+}
+
+/* ✅ Linke Bank */
+.bank-links {
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    border: 3px solid #444;
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* ✅ Runde Stühle rechts */
+.stuhl-rund {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 3px solid #444;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* ✅ Stuhl-Positionen */
+.stuhl-rund-rechts1 { right: -30px; top: 20px; }
+.stuhl-rund-rechts2 { right: -30px; bottom: 20px; }
+
+/* ✅ Ganze Tischgruppe wird grün, wenn sie ausgewählt ist */
+.tischgruppe-bank.ausgewählt .tisch,
+.tischgruppe-bank.ausgewählt .bank-links,
+.tischgruppe-bank.ausgewählt .stuhl-rund {
+    background: limegreen !important;
+}
+
+/* ✅ Ganze Tischgruppe wird rot, wenn sie reserviert ist */
+.tischgruppe-bank.reserviert .tisch,
+.tischgruppe-bank.reserviert .bank-links,
+.tischgruppe-bank.reserviert .stuhl-rund {
+    background: crimson !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+/* Admin-Ansicht-Button */
+#toggleAdmin {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: #2ecc71; /* Grüner Button für Admin */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+#toggleAdmin:hover {
+    background: #27ae60; /* Dunkleres Grün beim Hover */
+}
+
+/* Admin-Reservierungsübersicht */
+#adminReservierungen {
+    display: none; /* Standardmäßig versteckt */
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 500px;
+    text-align: left;
+}
+
+#adminReservierungen h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#adminReservierungen p {
+    border-bottom: 1px solid white;
+    padding: 5px 0;
+}
+/* Spezifische Styles für Etage 2 */
+/* Damit sich die Styles von Etage 1 und Etage 2 nicht überschneiden */
+#etage2 .tischgruppe,
+#etage2 .restaurant-row {
+  /* Hier kannst du abweichende Layouts für Etage 2 definieren, falls nötig */
+}
+
+/* Angepasste Positionierung für den langen Tisch in Etage 2 */
+/* Basis-Styles für lange Tischgruppen in Etage 2 */
+#etage2 .tischgruppe-lang {
+  position: relative;
+  width: 160px;
+  top: 1px;  /* Abstand von oben – anpassbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 440px;
+  z-index: 10;
+}
+
+/* Linke lange Tischgruppe */
+#etage2 .tischgruppe-lang-left {
+  left: 10px;  /* Positioniert die Tischgruppe links */
+}
+
+/* Rechte lange Tischgruppe */
+#etage2 .tischgruppe-lang-right {
+  right: 10px; /* Positioniert die Tischgruppe rechts */
+  left: auto;
+}
+/* CSS für die kleine Tischgruppe in Etage 2 */
+.tischgruppe.klein {
+  width: 100px;       /* Kleinere Breite */
+  height: 100px;      /* Kleinere Höhe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;  /* Abstand zur nächsten Reihe */
+}
+
+.tischgruppe.klein .tisch {
+  width: 100px;       /* Angepasste Tischgröße */
+  height: 50px;
+  background-color: white;
+  border: 5px solid #444;
+  position: relative;
+}
+
+.tischgruppe.klein .stuhl {
+  width: 40px;       /* Angepasste Stuhlgröße */
+  height: 40px;
+  background-color: white;
+  border: 3px solid #444;
+  position: absolute;
+}
+
+/* Positionierung der beiden Stühle */
+.tischgruppe.klein .stuhl-links1 {
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tischgruppe.klein .stuhl-rechts1 {
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tischgruppe-bank {
+  position: relative;
+  width: 180px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 50px; /* Abstand von den anderen Tischgruppen – Wert nach Bedarf anpassen */
+}
