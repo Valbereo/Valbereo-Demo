@@ -6,19 +6,19 @@ const reservierenButton = document.getElementById("reservierenButton");
 const reservierungsDatum = document.getElementById("reservierungsDatum");
 const kontaktFeld = document.getElementById("kontakt");
 
-let aktuelleEtage = 2;
+let aktuelleEtage = 1;
 let reservierungen = { 1: {}, 2: {} }; // Reservierungen pro Etage speichern
 let ausgewählteTische = new Set();
 
 wechselEtageButton.addEventListener("click", () => {
     if (aktuelleEtage === 2) {
-        etage2.style.display = "none";
-        etage1.style.display = "block";
+        etage2.style.display = "block";
+        etage1.style.display = "none";
         wechselEtageButton.textContent = "Wechsle zu Etage 2";
         aktuelleEtage = 1;
     } else {
-        etage1.style.display = "none";
-        etage2.style.display = "block";
+        etage1.style.display = "block";
+        etage2.style.display = "none";
         wechselEtageButton.textContent = "Wechsle zu Etage 1";
         aktuelleEtage = 2;
     }
