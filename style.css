@@ -12,6 +12,7 @@ body {
     height: 100vh;
     margin: 0;
     padding-top: 30px;
+    overflow-y: auto;
 }
 
 .restaurant {
@@ -376,4 +377,32 @@ body {
   align-items: center;
   cursor: pointer;
   margin-left: 50px; /* Abstand von den anderen Tischgruppen – Wert nach Bedarf anpassen */
+}
+.restaurant-row.long-table-row .tischgruppe-lang {
+  position: relative;  /* Hebt das absolute Positionieren auf */
+  top: 0;
+  left: 0;
+  margin: 0 10px;      /* Optionaler Abstand zwischen den langen Tischen */
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 20px;
+}
+
+.table-group-wrapper {
+  display: flex;
+  flex-direction: column;  /* Vertikal anordnen */
+  gap: 30px;               /* Abstand zwischen den Tischgruppen */
+}
+
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
